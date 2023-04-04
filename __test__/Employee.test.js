@@ -7,18 +7,18 @@ test('should create a new Employee instance with name, id, email, and role', () 
     expect(employee.email).toEqual('Angieliz@gmail.com');
 });
 
-test('test if we can get the name from the getName() method', () => {
+test('should return the name from the getName()', () => {
     expect(employee.getName()).toBe('Angie');
 });
 
-test('test if we can get the id from the getId() method', () => {
+test('should return the id from the getId()', () => {
     expect(employee.getId()).toBe('1234567');
 });
 
-test('test if we can get the email from the getEmail() method', () => {
+test('should return the email from the getEmail()', () => {
     expect(employee.getEmail()).toBe('Angieliz@gmail.com');
 });
 
-test('test if we can get the role from the getRole() method', () => {
+test('shoud return the role from the getRole()', () => {
     expect(employee.getRole()).toBe('Employee');
 });

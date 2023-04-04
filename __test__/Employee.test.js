@@ -1,4 +1,4 @@
-const Employee = rquire ("../Employee");
+const Employee = require ("../Employee");
 const employee = new Employee ("Angie", "1234567", "Angieliz@gmail.com");
 
 test('test if we can get the constructor values for the employee object', () => {

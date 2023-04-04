@@ -61,7 +61,9 @@
     "wrap-ansi": "^7.0.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "reset": "rm ./dist/index.html",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",

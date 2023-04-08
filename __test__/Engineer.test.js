@@ -5,7 +5,7 @@ test('should create a new Employee instance with name, id, email, and github use
     expect(engineer.name).toEqual('Angie');
     expect(engineer.id).toEqual('1234567');
     expect(engineer.email).toEqual('Angieliz@gmail.com');
-    expect(engineer.githubUsername).toEqual('angeliz');
+    expect(engineer.github).toEqual('angeliz');
 });
 
 test('should return the name from the getName', () => {

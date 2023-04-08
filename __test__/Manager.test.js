@@ -1,11 +1,11 @@
 const Manager = require ('../lib/Manager');
-const manager = new Manager ("Angie", "1234567", "Angieliz@gmail.com", "123");
+const manager = new Manager ("Angie", "1234567", "Angieliz@gmail.com", "678");
 
 test('should create a new Employee instance with name, id, email, and office number', () => {
-    expect(manager.name).toEqual('Angie');
-    expect(manager.id).toEqual('1234567');
-    expect(manager.email).toEqual('Angieliz@gmail.com');
-    expect(manager.officeNumber).toEqual('123');
+    expect(manager.name).toBe('Angie');
+    expect(manager.id).toBe('1234567');
+    expect(manager.email).toBe('Angieliz@gmail.com');
+    expect(manager.officeNumber).toBe('678');
 });
 
 test('should return the name from the getName', () => {
@@ -21,7 +21,7 @@ test('should return the email from the getEmail', () => {
 });
 
 test('should return the school from the getOfficeNumber', () => {
-    expect(manager.getOfficeNumber()).toBe('123');
+    expect(manager.getOfficeNumber()).toBe('678');
 });
 
 test('shoud return the role from the getRole()', () => {

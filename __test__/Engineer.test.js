@@ -21,7 +21,7 @@ test('should return the email from the getEmail', () => {
 });
 
 test('should return the username from the githubUsername', () => {
-    expect(engineer.getGithub()).toBe('Angieliz@gmail.com');
+    expect(engineer.getGithub()).toBe('angeliz');
 });
 
 test('shoud return the role from the getRole()', () => {

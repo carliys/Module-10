@@ -2,11 +2,11 @@ const createTeam = (team) => {
     const addEngineer = (engineer) => {
         return `
             <div class="card" style="width: 18rem;">
-               <div class="card-header"> ${engineer.getName()} <br/>
-               <i class="Position"></i> ${engineer.getId()} </div>
+               <div class="card-header"> ${engineer.getName()}<br/>
+               <i class="Position"></i>Engineer</div>
                <ul class="list-group">
-                <li class="list-group-item heading">ID: 567483</li>
-                <li class="list-group-item heading">Email: <span id="email"><a href="mailto:leo231@gmail.com">leo231@gmail.com</a></span></li>
+                <li class="list-group-item heading">${engineer.getId()}</li>
+                <li class="list-group-item heading">Email: <span id="email"><a href="mailto:leo231@gmail.com">${engineer.getEmail()}</a></span></li>
                 <li class="list-group-item heading">Office Number: 13224</li>
                 </ul>
             </div>
@@ -17,11 +17,11 @@ const createTeam = (team) => {
     const addIntern = (intern) => {
         return `
             <div class="card" style="width: 18rem;">
-               <div class="card-header"> ${intern.getName()} <br/>
-               <i class="Position"></i> ${intern.getId()} </div>
+               <div class="card-header"> ${intern.getName()}<br/>
+               <i class="Position"></i>Intern</div>
                <ul class="list-group">
-                <li class="list-group-item heading">ID: 567483</li>
-                <li class="list-group-item heading">Email: <span id="email"><a href="mailto:leo231@gmail.com">leo231@gmail.com</a></span></li>
+                <li class="list-group-item heading">${intern.getId()}</li>
+                <li class="list-group-item heading">Email: <span id="email"><a href="mailto:leo231@gmail.com">${intern.getEmail()}</a></span></li>
                 <li class="list-group-item heading">Office Number: 13224</li>
                 </ul>
             </div>
@@ -32,11 +32,11 @@ const createTeam = (team) => {
     const addManager = (manager) => {
         return `
             <div class="card" style="width: 18rem;">
-               <div class="card-header"> ${manager.getName()} <br/>
-               <i class="Position"></i> ${manager.getId()} </div>
+               <div class="card-header"> ${manager.getName()}<br/>
+               <i class="Position"></i>Manager</div>
                <ul class="list-group">
-                <li class="list-group-item heading">ID: 567483</li>
-                <li class="list-group-item heading">Email: <span id="email"><a href="mailto:leo231@gmail.com">leo231@gmail.com</a></span></li>
+                <li class="list-group-item heading">${manager.getId()}</li>
+                <li class="list-group-item heading">Email: <span id="email"><a href="mailto:leo231@gmail.com">${manager.getEmail()}</a></span></li>
                 <li class="list-group-item heading">Office Number: 13224</li>
                 </ul>
             </div>
@@ -56,6 +56,12 @@ const createTeam = (team) => {
         team
         .filter((teamMember) => teamMember.getRole() === "Intern")
         .map((intern) => addIntern(intern))
+        .join("") 
+    );
+    html.push(
+        team
+        .filter((teamMember) => teamMember.getRole() === "Manager")
+        .map((manager) => addManager(manager))
         .join("") 
     );
     return html.join("");

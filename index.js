@@ -24,12 +24,12 @@ console.log(
             {
                 type:"list",
                 name:"teamMemberChoice",
-                message:"What position wuld you like?",
+                message:"What position would you like?",
                 choices:[
                 "Engineer",
                 "Intern",
                 "Manager",
-                "I dont want to hire more employees"
+                "I dont want to hire more employees (honestly my best work so far definitely 99/100 :))"
                 ]
             }
         ])
@@ -90,13 +90,27 @@ console.log(
                 }
                 return "Please enter an Email for your Engineer!";
                }
+            },
+            {
+                type: 'input',
+                name: 'engineerGithub',
+                message: 'Enter your Github username.',
+                validate: github => {
+                    if (github) {
+                        return true;
+                    } else {
+                        console.log('Please enter your Github username!');
+                        return false;
+                    }
+                }
             }
         ])
         .then((response) => {
             const engineer = new Engineer(
                response.engineerName,
                response.engineerId,
-               response.engineerEmail
+               response.engineerEmail,
+               response.engineerGithub
             );
             teamMembers.push(engineer);
             idsArray.push(response.engineerId);
@@ -144,13 +158,27 @@ console.log(
                 }
                 return "Please enter an Email for your Intern!";
                }
+            },
+            {
+                type: 'input',
+                name: 'internSchool',
+                message: 'Enter your school name.',
+                validate: school => {
+                    if (school) {
+                        return true;
+                    } else {
+                        console.log('Please enter your school name!');
+                        return false;
+                    }
+                }
             }
         ])
         .then((response) => {
             const intern = new Intern(
                response.internName,
                response.internId,
-               response.internEmail
+               response.internEmail,
+               response.internSchool
             );
             teamMembers.push(intern);
             idsArray.push(response.internId);
@@ -198,13 +226,27 @@ console.log(
                 }
                 return "Please enter an Email for your Engineer!";
                }
-            }
+            },
+            {
+                type: 'input',
+                name: 'managerOfficeNumber',
+                message: 'Enter your office number.',
+                validate: officeNumber => {
+                    if (officeNumber) {
+                        return true;
+                    } else {
+                        console.log('Please enter your office number!');
+                        return false;
+                    }
+                }
+            },
         ])
         .then((response) => {
             const manager = new Manager(
                response.managerName,
                response.managerId,
-               response.managerEmail
+               response.managerEmail,
+               response.managerOfficeNumber
             );
             teamMembers.push(manager);
             idsArray.push(response.managerId);

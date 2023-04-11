@@ -5,9 +5,9 @@ const createTeam = (team) => {
                <div class="card-header"> ${engineer.getName()}<br/>
                <i class="Position"></i>Engineer</div>
                <ul class="list-group">
-                <li class="list-group-item heading">${engineer.getId()}</li>
+                <li class="list-group-item heading">ID: <a>${engineer.getId()}</a></li>
                 <li class="list-group-item heading">Email: <span id="email"><a href="mailto:leo231@gmail.com">${engineer.getEmail()}</a></span></li>
-                <li class="list-group-item heading">Office Number: 13224</li>
+                <li class="list-group-item heading">GitHub: <span id="GitHub"><a href="github.com"> ${engineer.getGithub()}</a></span></li>
                 </ul>
             </div>
 
@@ -20,10 +20,9 @@ const createTeam = (team) => {
                <div class="card-header"> ${intern.getName()}<br/>
                <i class="Position"></i>Intern</div>
                <ul class="list-group">
-                <li class="list-group-item heading">${intern.getId()}</li>
+                <li class="list-group-item heading">ID: <a>${intern.getId()}</a></li>
                 <li class="list-group-item heading">Email: <span id="email"><a href="mailto:leo231@gmail.com">${intern.getEmail()}</a></span></li>
-                <li class="list-group-item heading">Office Number: 13224</li>
-                </ul>
+                <li class="list-group-item heading">School: <a> ${intern.getSchool()}</a></li>
             </div>
 
         `;
@@ -35,9 +34,9 @@ const createTeam = (team) => {
                <div class="card-header"> ${manager.getName()}<br/>
                <i class="Position"></i>Manager</div>
                <ul class="list-group">
-                <li class="list-group-item heading">${manager.getId()}</li>
+                <li class="list-group-item heading">ID: <a>${manager.getId()}</a></li>
                 <li class="list-group-item heading">Email: <span id="email"><a href="mailto:leo231@gmail.com">${manager.getEmail()}</a></span></li>
-                <li class="list-group-item heading">Office Number: 13224</li>
+                <li class="list-group-item heading">Office Number: <a> ${manager.getOfficeNumber()}</a></li>
                 </ul>
             </div>
 
